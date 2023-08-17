@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://c81mdb6uvq5lf"]
+
+[ext_resource type="Texture2D" uid="uid://bqhgvuedcxemi" path="res://art/background 2.png" id="1_de5kp"]
+[ext_resource type="Texture2D" uid="uid://dw2nqnvg0knc7" path="res://art/Top UI v 2.png" id="2_0t2lt"]
+[ext_resource type="Texture2D" uid="uid://405g4n4hh7u8" path="res://art/Bottom UI v 2.png" id="3_uxp4o"]
+[ext_resource type="Script" path="res://Scripts/grid.gd" id="4_vfra5"]
+
+[node name="main" type="Node2D"]
+
+[node name="game_window" type="Node2D" parent="."]
+
+[node name="background" type="TextureRect" parent="game_window"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_de5kp")
+
+[node name="top_ui" type="TextureRect" parent="game_window"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_0t2lt")
+
+[node name="bottom_ui" type="TextureRect" parent="game_window"]
+offset_top = 928.0
+offset_right = 576.0
+offset_bottom = 1020.0
+texture = ExtResource("3_uxp4o")
+
+[node name="grid" type="Node2D" parent="game_window"]
+script = ExtResource("4_vfra5")
+width = 8
+height = 10
+x_start = 64
+y_start = 800
+offset = 64
